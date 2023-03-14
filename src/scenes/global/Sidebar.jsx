@@ -105,7 +105,8 @@ const Sidebar = () => {
                   alt="prfile-user"
                   width="80px"
                   height="80px"
-                  src={`../../assets/user.jpg`}
+                  src={`https://github.com/SalmaWael/admin-dashboard/blob/main/public/assets/user.jpg`}
+                  // src={`../../assets/user.jpg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
