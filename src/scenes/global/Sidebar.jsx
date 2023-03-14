@@ -39,7 +39,7 @@ const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, SetIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState("");
   return (
     <Box
       sx={{
@@ -50,13 +50,15 @@ const Sidebar = () => {
           padding: "0px 20px !important",
         },
 
-        "& .ps-active": {
-          color: "#6870fa !important",
-        },
+        // "& .ps-active .ps-menu-button": {
+        //   color: "#6870fa !important",
+        // },
       }}
     >
       <ProSidebarProvider collapsed={isCollapsed}>
         <Menu
+          disableAutoFocusItem={true}
+          autoFocus={false}
           iconShape="square"
           menuItemStyles={{
             button: {
@@ -67,8 +69,8 @@ const Sidebar = () => {
                 color: "#868dfb !important",
                 background: "none",
               },
-              "&:active": {
-                color: "#6870fa !important",
+              "& .ps-active": {
+                color: `${selected ? "#6870fa !important" : ""}`,
               },
             },
           }}
