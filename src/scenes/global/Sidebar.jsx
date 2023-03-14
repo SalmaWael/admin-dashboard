@@ -17,6 +17,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import PersonIcon from "@mui/icons-material/Person";
 
 const Item = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
   const theme = useTheme();
@@ -43,7 +44,7 @@ const Sidebar = () => {
     <Box
       sx={{
         width: `${isCollapsed ? "8%" : "21%"}`,
-        height: `${isCollapsed ? "111%" : "111%"}`,
+        height: `${isCollapsed ? "100%" : "100%"}`,
         background: `${colors.primary[400]} !important`,
         "& .ps-menuitem-root": {
           padding: "0px 20px !important",
@@ -101,21 +102,22 @@ const Sidebar = () => {
           {!isCollapsed && (
             <Box mb="15px">
               <Box display="flex" justifyContent="center" alignItems="center">
-                <img
-                  alt="prfile-user"
+                <PersonIcon sx={{ fontSize: "35px" }} />
+                {/* <img
+                  alt="user-profile"
                   width="80px"
                   height="80px"
-                  src={`https://github.com/SalmaWael/admin-dashboard/blob/main/public/assets/user.jpg`}
-                  // src={`../../assets/user.jpg`}
+                  // src={`https://github.com/SalmaWael/admin-dashboard/blob/main/public/assets/user.jpg`}
+                  src={`../../assets/user.jpg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
-                />
+                /> */}
               </Box>
               <Box textAlign="center">
                 <Typography
                   variant="h2"
                   color={colors.grey[100]}
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
+                  sx={{ m: "5px 0 0 0" }}
                 >
                   Salma
                 </Typography>
